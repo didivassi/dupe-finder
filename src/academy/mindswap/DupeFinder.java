@@ -6,8 +6,8 @@ import java.util.*;
 
 public class DupeFinder<E> {
 
-    List<E> list;
-    public DupeFinder(List<E> list){
+    Collection<E> list;
+    public DupeFinder(Collection<E> list){
         this.list=list;
     }
 
@@ -28,9 +28,9 @@ public class DupeFinder<E> {
         Set<E> set=new HashSet<>(list);
         List<E> listDup=new ArrayList<E>(list);
         for (E element:set) {
-            if(listDup.contains(element)){
+          //  if(listDup.contains(element)){
                 listDup.remove(element);
-            }
+          //  }
         }
         return listDup;
     }
