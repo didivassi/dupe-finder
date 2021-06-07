@@ -43,7 +43,4 @@ public class DupeFinder<E> {
         return new ArrayList<E>(new HashSet<E>(list));
     }
 
-
-
-
 }
