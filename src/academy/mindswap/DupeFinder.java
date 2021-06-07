@@ -17,11 +17,13 @@ public class DupeFinder<E> {
 
     public int countDuplicates(){
         Set<E> set=new HashSet<>(list);
-       // set.addAll(list);
         return list.size()-set.size();
     }
 
-
+   /**
+   * Returns a new ArrayList containing only duplicated elements
+   *
+   * */
     public List<E> getDuplicatedList() {
         Set<E> set=new HashSet<>(list);
         List<E> listDup=new ArrayList<E>(list);
@@ -30,10 +32,13 @@ public class DupeFinder<E> {
                 listDup.remove(element);
             }
         }
-
         return listDup;
     }
 
+    /**
+     * Returns a new ArrayList without duplicated elements
+     *
+     * */
     public List<E>  getNonDuplicatedList(){
         return new ArrayList<E>(new HashSet<E>(list));
     }
