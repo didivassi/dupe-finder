@@ -44,7 +44,9 @@ public class Main {
         }
 
         System.out.println("-------");
+
         List<Fruit> nonDuplicatedList= dupeFinder.getNonDuplicatedList();
+        Collections.sort(nonDuplicatedList);
         for (Fruit fruit:nonDuplicatedList) {
             System.out.println(fruit);
         }
