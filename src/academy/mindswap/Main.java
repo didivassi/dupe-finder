@@ -5,6 +5,7 @@ import academy.mindswap.fruits.Fruit;
 import academy.mindswap.fruits.Orange;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class Main {
 
 
 
-        ArrayList<Fruit> list =new ArrayList<>();
+       /* ArrayList<Fruit> list =new ArrayList<>();
         list.add(new Apple(1));
         list.add(new Apple(2));
         list.add(new Apple(2));//1
@@ -26,7 +27,21 @@ public class Main {
         list.add(new Orange(2));
         list.add(new Orange(2));//4
         list.add(new Orange(1));//5
-        list.add(new Orange(3));
+        list.add(new Orange(3));*/
+        List<Fruit> list = Arrays.asList(
+                new Apple(1),
+                new Apple(2),
+                new Apple(2),
+                new Apple(1),
+                new Apple(1),
+                new Apple(3),
+                new Orange(1),
+                new Orange(2),
+                new Orange(2),
+                new Orange(1),
+                new Orange(3)
+                );
+
 
         DupeFinder<Fruit>  dupeFinder= new DupeFinder<>(list);
 
