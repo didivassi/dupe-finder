@@ -11,7 +11,6 @@ public class DupeFinder<E> {
         this.list=list;
     }
 
-
     public int countList(){
         return list.size();
     }
@@ -25,7 +24,7 @@ public class DupeFinder<E> {
 
     public List<E> getDuplicatedList() {
         Set<E> set=new HashSet<>(list);
-        List<E> listDup=list;
+        List<E> listDup=new ArrayList<E>(list);
         for (E element:set) {
             if(listDup.contains(element)){
                 listDup.remove(element);
@@ -33,6 +32,10 @@ public class DupeFinder<E> {
         }
 
         return listDup;
+    }
+
+    public List<E>  getNonDuplicatedList(){
+        return new ArrayList<E>(new HashSet<E>(list));
     }
 
 

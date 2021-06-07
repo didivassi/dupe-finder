@@ -43,11 +43,11 @@ public class Main {
             System.out.println(fruit);
         }
 
+        System.out.println("-------");
+        List<Fruit> nonDuplicatedList= dupeFinder.getNonDuplicatedList();
+        for (Fruit fruit:nonDuplicatedList) {
+            System.out.println(fruit);
+        }
 
-
-
-       // dupeFinder.showDuplicates();
-
-       // dupeFinder.showWithoutDuplicates();
     }
 }
